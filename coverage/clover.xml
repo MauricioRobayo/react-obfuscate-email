@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1629153106066" clover="3.2.0">
+  <project timestamp="1629153106066" name="All files">
+    <metrics statements="18" coveredstatements="18" conditionals="12" coveredconditionals="12" methods="3" coveredmethods="3" elements="33" coveredelements="33" complexity="0" loc="18" ncloc="18" packages="1" files="1" classes="1"/>
+    <file name="index.tsx" path="/home/rfmaj/Projects/react-obfuscate-email/src/index.tsx">
+      <metrics statements="18" coveredstatements="18" conditionals="12" coveredconditionals="12" methods="3" coveredmethods="3"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="10" count="10" type="stmt"/>
+      <line num="11" count="10" type="stmt"/>
+      <line num="39" count="1" type="stmt"/>
+      <line num="40" count="14" type="cond" truecount="2" falsecount="0"/>
+      <line num="41" count="14" type="cond" truecount="2" falsecount="0"/>
+      <line num="42" count="14" type="stmt"/>
+      <line num="43" count="14" type="stmt"/>
+      <line num="44" count="14" type="stmt"/>
+      <line num="45" count="14" type="stmt"/>
+      <line num="47" count="14" type="stmt"/>
+      <line num="48" count="14" type="stmt"/>
+      <line num="51" count="14" type="stmt"/>
+      <line num="54" count="7" type="stmt"/>
+      <line num="57" count="14" type="cond" truecount="2" falsecount="0"/>
+      <line num="58" count="14" type="cond" truecount="2" falsecount="0"/>
+      <line num="60" count="14" type="stmt"/>
+    </file>
+  </project>
+</coverage>

@@ -19,7 +19,7 @@ describe('obfuscate email until user focuses on it', () => {
 
     expect(link).not.toHaveAttribute(
       'href',
-      expect.stringContaining(`mailto:${fakeEmail}`)
+      expect.stringContaining(fakeEmail)
     );
     expect(link).toHaveAttribute('target', '_blank');
     expect(link).toHaveAttribute('rel', 'noopener noreferrer');
@@ -28,10 +28,7 @@ describe('obfuscate email until user focuses on it', () => {
 
     fireEvent.focus(link);
 
-    expect(link).toHaveAttribute(
-      'href',
-      expect.stringContaining(`mailto:${fakeEmail}`)
-    );
+    expect(link).toHaveAttribute('href', `mailto:${fakeEmail}`);
     expect(link).toHaveAttribute('target', '_blank');
     expect(link).toHaveAttribute('rel', 'noopener noreferrer');
     expect(link).toHaveAttribute('title', 'Email me!');
@@ -53,7 +50,7 @@ describe('obfuscate email until user focuses on it', () => {
 
     expect(link).not.toHaveAttribute(
       'href',
-      expect.stringContaining(`mailto:${fakeEmail}`)
+      expect.stringContaining(fakeEmail)
     );
     expect(link).toHaveAttribute('target', '_blank');
     expect(link).toHaveAttribute('rel', 'noopener noreferrer');
@@ -62,10 +59,7 @@ describe('obfuscate email until user focuses on it', () => {
 
     fireEvent.focus(link);
 
-    expect(link).toHaveAttribute(
-      'href',
-      expect.stringContaining(`mailto:${fakeEmail}`)
-    );
+    expect(link).toHaveAttribute('href', `mailto:${fakeEmail}`);
     expect(link).toHaveAttribute('target', '_blank');
     expect(link).toHaveAttribute('rel', 'noopener noreferrer');
     expect(link).toHaveAttribute('title', 'Email me!');
@@ -87,7 +81,7 @@ describe('obfuscates email until user hovers over it', () => {
 
     expect(link).not.toHaveAttribute(
       'href',
-      expect.stringContaining(`mailto:${fakeEmail}`)
+      expect.stringContaining(fakeEmail)
     );
     expect(link).toHaveAttribute('target', '_blank');
     expect(link).toHaveAttribute('rel', 'noopener noreferrer');
@@ -96,10 +90,7 @@ describe('obfuscates email until user hovers over it', () => {
 
     fireEvent.mouseOver(link);
 
-    expect(link).toHaveAttribute(
-      'href',
-      expect.stringContaining(`mailto:${fakeEmail}`)
-    );
+    expect(link).toHaveAttribute('href', `mailto:${fakeEmail}`);
     expect(link).toHaveAttribute('target', '_blank');
     expect(link).toHaveAttribute('rel', 'noopener noreferrer');
     expect(link).toHaveAttribute('title', 'Email me!');
@@ -121,7 +112,7 @@ describe('obfuscates email until user hovers over it', () => {
 
     expect(link).not.toHaveAttribute(
       'href',
-      expect.stringContaining(`mailto:${fakeEmail}`)
+      expect.stringContaining(fakeEmail)
     );
     expect(link).toHaveAttribute('target', '_blank');
     expect(link).toHaveAttribute('rel', 'noopener noreferrer');
@@ -130,10 +121,7 @@ describe('obfuscates email until user hovers over it', () => {
 
     fireEvent.mouseOver(link);
 
-    expect(link).toHaveAttribute(
-      'href',
-      expect.stringContaining(`mailto:${fakeEmail}`)
-    );
+    expect(link).toHaveAttribute('href', `mailto:${fakeEmail}`);
     expect(link).toHaveAttribute('target', '_blank');
     expect(link).toHaveAttribute('rel', 'noopener noreferrer');
     expect(link).toHaveAttribute('title', 'Email me!');
@@ -149,7 +137,7 @@ describe('properly set query string', () => {
 
     expect(link).not.toHaveAttribute(
       'href',
-      expect.stringContaining(`mailto:${fakeEmail}`)
+      expect.stringContaining(fakeEmail)
     );
 
     fireEvent.focus(link);
@@ -167,7 +155,7 @@ describe('properly set query string', () => {
 
     expect(link).not.toHaveAttribute(
       'href',
-      expect.stringContaining(`mailto:${fakeEmail}`)
+      expect.stringContaining(fakeEmail)
     );
 
     fireEvent.focus(link);
@@ -188,7 +176,7 @@ describe('properly set query string', () => {
 
     expect(link).not.toHaveAttribute(
       'href',
-      expect.stringContaining(`mailto:${fakeEmail}`)
+      expect.stringContaining(fakeEmail)
     );
 
     fireEvent.focus(link);

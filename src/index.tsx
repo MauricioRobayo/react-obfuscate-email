@@ -4,9 +4,27 @@ import React, {
   ReactNode,
   useState,
 } from 'react';
+import styled from 'styled-components';
 import { percentEncodeParams } from './utils';
 
-export type Props = DetailedHTMLProps<
+const Obfuscated = styled.span`
+  &::after {
+    content: '@';
+  }
+`;
+
+function obfuscateEmail(email: string): JSX.Element {
+  const [username, domain] = email.split('@');
+  return (
+    <>
+      {username}
+      <Obfuscated />
+      {domain}
+    </>
+  );
+}
+
+type Props = DetailedHTMLProps<
   AnchorHTMLAttributes<HTMLAnchorElement>,
   HTMLAnchorElement
 > & {
@@ -34,6 +52,9 @@ export function Email({
     setHovered(true);
   }
 
+  const displayText = children || email;
+  const obfuscatedText = children || obfuscateEmail(email);
+
   return (
     <a
       className={className}
@@ -42,14 +63,7 @@ export function Email({
       onMouseOver={handleHover}
       {...rest}
     >
-      {hovered
-        ? children || email
-        : children ||
-          email
-            .split('@')
-            .map((emailSegment) => (
-              <span key={emailSegment}>{emailSegment}</span>
-            ))}
+      {hovered ? displayText : obfuscatedText}
     </a>
   );
 }

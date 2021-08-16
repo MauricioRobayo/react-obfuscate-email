@@ -1,9 +1,9 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
-import { Email, Props } from '../src';
+import { Meta } from '@storybook/react';
+import { Email } from '../src';
 
 const meta: Meta = {
-  title: 'Obfuscate e-mail',
+  title: 'Email',
   component: Email,
   argTypes: {
     children: {
@@ -17,12 +17,18 @@ const meta: Meta = {
   },
 };
 
+export const Simple = () => <Email email="test@example.com" />;
+
+export const Children = () => (
+  <Email email="test@example.com">
+    <div>📧 Click here to email me!</div>
+  </Email>
+);
+
+export const Params = () => (
+  <Email email="test@example.com" subject="Hello, world!" body="You rock! 🚀">
+    <div>📧 Click here to email me!</div>
+  </Email>
+);
+
 export default meta;
-
-const Template: Story<Props> = (args) => <Email {...args} />;
-
-// By passing using the Args format for exported stories, you can control the props for a component for reuse in a test
-// https://storybook.js.org/docs/react/workflows/unit-testing
-export const Default = Template.bind({});
-
-Default.args = {};

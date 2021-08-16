@@ -40,7 +40,7 @@ If no children is given, it will use the email as the displayed text for the lin
 <Email email="test@example.com" />
 ```
 
-In this case the '@' symbol is stripped out and is displayed using css `::after` pseudo-element:
+In this case the '@' symbol is stripped out and is displayed using css `::after` pseudo-element, so the content of the link will actually be `testexample.com`, making it useless for bots:
 
 ```html
 <a href="#">test<span class="roe"><span>example.com</a>

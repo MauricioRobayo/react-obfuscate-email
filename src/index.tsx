@@ -4,21 +4,23 @@ import React, {
   ReactNode,
   useState,
 } from 'react';
-import styled from 'styled-components';
 import { percentEncodeParams } from './utils';
-
-const Obfuscated = styled.span`
-  &::after {
-    content: '@';
-  }
-`;
 
 function obfuscateEmail(email: string): JSX.Element {
   const [username, domain] = email.split('@');
   return (
     <>
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+          a.span.roe::after {
+            content: "@";
+          }
+        `,
+        }}
+      />
       {username}
-      <Obfuscated />
+      <span className="roe" />
       {domain}
     </>
   );

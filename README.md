@@ -88,7 +88,7 @@ You can also include the `_target` attribute (or any other `a` attribute):
 
 The component is written in TypeScript and type definitions are included.
 
-## peerDependencies
+## Peer Dependencies
 
 - [React >= 16](https://reactjs.org/)
 - [styled components >= 5](https://styled-components.com/)

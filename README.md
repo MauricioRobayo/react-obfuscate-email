@@ -1,13 +1,23 @@
 # React Obfuscate Email
 
-📧 React component to obfuscate email links
+📧 React component to obfuscate email links.
+
+## Usage
+
+```sh
+npm i react-obfuscate-email
+```
+
+Import `Email` named component:
+
+```js
+import { Email } from 'react-obfuscate-email';
+```
+
+## Examples
 
 ```jsx
-import { Email } from 'react-obfuscate-email';
-
-export default function SomeComponent() {
-  return <Email email="test@example.com">📧 Email me!</Email>;
-}
+<Email email="test@example.com">📧 Email me!</Email>
 ```
 
 Will render:
@@ -16,9 +26,9 @@ Will render:
 <a href="#">📧 Email me!</a>
 ```
 
-Making it useless for bots scraping for emails.
+The `href` attribute is set to a `#` making it useless for bots scraping for emails:
 
-When the user hovers over it or focus on it, it will change to:
+Once the user interacts with it by hovering over it or focusing on it, it will properly set the `href` attribute:
 
 ```html
 <a href="test@example.com">📧 Email me!</a>
@@ -27,63 +37,61 @@ When the user hovers over it or focus on it, it will change to:
 If no children is given, it will use the email as the displayed text for the link:
 
 ```jsx
-import { Email } from "react-obfuscate-email";
-
-export default function SomeComponent() {
-  return <Email email="test@example.com" />";
-}
+<Email email="test@example.com" />"
 ```
 
-Will render:
+In this case the '@' symbol is stripped out and is displayed using css `::after` pseudo-element:
 
 ```html
 <a href="#">testexample.com</a>
 ```
 
-The '@' symbol is stripped out and is displayed using css `::after` pseudo-element.
-
-Once the user interacts with the element, it will be properly set to the email link:
+Once the user interacts with the element, it will be properly set:
 
 ```html
 <a href="test@example.com">test@example.com</a>
 ```
 
-The component also accepts `body` and `subject` props that will be use on the link:
+The component also accepts `body` and `subject` props that will be properly encoded for the link:
 
 ```jsx
-import { Email } from "react-obfuscate-email";
-
-export default function SomeComponent() {
-  return (
-    <Email
-      email="test@example.com"
-      body="You rock! 🚀"
-      subject="Hello, world! 👋'
-    />
-  )
-}
+<Email
+  email="test@example.com"
+  body="You rock! 🚀"
+  subject="Hello, world! 👋"
+/>
 ```
 
-You can also set the `_target` property (or any other `a` attribute):
+Will render (notice spaces are percent encoded instead of being replaced with '+'):
+
+```html
+<a
+  href="test@example.com?body=You%20rock!%20%F0%9F%9A%80&subject=Hello%2C%20world!%20%F0%9F%91%8B"
+  >test@example.com</a
+>
+```
+
+You can also include the `_target` attribute (or any other `a` attribute):
 
 ```jsx
-import { Email } from 'react-obfuscate-email';
-
-export default function SomeComponent() {
-  return (
-    <Email
-      email="test@example.com"
-      body="You rock! 🚀"
-      subject="Hello, world! 👋"
-      title="Email me"
-      target="_blank"
-      rel="noopener noreferrer"
-    />
-  );
-}
+<Email
+  email="test@example.com"
+  body="You rock! 🚀"
+  subject="Hello, world! 👋"
+  title="Email me"
+  target="_blank"
+  rel="noopener noreferrer"
+/>
 ```
 
-**It uses `styled-components`, it should be installed on your project.**
+## TypeScript
+
+The component is written in TypeScript and type definitions are included.
+
+## peerDependencies
+
+- [React >= 16](https://reactjs.org/)
+- [styled components >= 5](https://styled-components.com/)
 
 ## LICENSE
 

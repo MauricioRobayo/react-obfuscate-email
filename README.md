@@ -43,7 +43,7 @@ If no children is given, it will use the email as the displayed text for the lin
 In this case the '@' symbol is stripped out and is displayed using css `::after` pseudo-element:
 
 ```html
-<a href="#">testexample.com</a>
+<a href="#">test<span class="roe"><span>example.com</a>
 ```
 
 Once the user interacts with the element, it will be properly replaced with:
@@ -92,7 +92,3 @@ The component is written in TypeScript and type definitions are included.
 ## LICENSE
 
 [MIT](LICENSE)
-
-```
-
-```

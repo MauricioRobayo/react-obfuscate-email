@@ -31,7 +31,7 @@ The `href` attribute is set to a `#` making it useless for bots scraping for ema
 Once the user interacts with it by hovering over it or focusing on it, it will properly set the `href` attribute:
 
 ```html
-<a href="test@example.com">📧 Email me!</a>
+<a href="mailto:test@example.com">📧 Email me!</a>
 ```
 
 If no children is given, it will use the email as the displayed text for the link:
@@ -49,7 +49,7 @@ In this case the '@' symbol is stripped out and is displayed using css `::after`
 Once the user interacts with the element, it will be properly replaced with:
 
 ```html
-<a href="test@example.com">test@example.com</a>
+<a href="mailto:test@example.com">test@example.com</a>
 ```
 
 The component also accepts `body` and `subject` props that will be properly encoded for the link:

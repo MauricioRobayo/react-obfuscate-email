@@ -26,7 +26,7 @@ Will render:
 <a href="#">📧 Email me!</a>
 ```
 
-The `href` attribute is set to a `#` making it useless for bots scraping for emails:
+The `href` attribute is set to a `#` making it useless for bots scraping for emails.
 
 Once the user interacts with it by hovering over it or focusing on it, it will properly set the `href` attribute:
 

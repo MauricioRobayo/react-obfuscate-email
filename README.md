@@ -29,3 +29,5 @@ export default function SomeComponent() {
   )
 }
 ```
+
+It uses `styled-components`, it should be installed on your project.

@@ -23,7 +23,7 @@ const cases = [
 ];
 
 describe.each(events)("obfuscate email until $name", ({ trigger }) => {
-  it.each(cases)("renders $obfuscatedText", ({ component, text }) => {
+  it.each(cases)("renders $text", ({ component, text }) => {
     const { queryByText, getByRole, getByText } = render(component);
     const link = getByRole("link");
 

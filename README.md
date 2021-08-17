@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/MauricioRobayo/react-obfuscate-email/actions/workflows/main.yml/badge.svg)](https://github.com/MauricioRobayo/react-obfuscate-email/actions/workflows/main.yml)
 [![codecov](https://codecov.io/gh/MauricioRobayo/react-obfuscate-email/branch/main/graph/badge.svg?token=gkrRmHZHGB)](https://codecov.io/gh/MauricioRobayo/react-obfuscate-email)
+[![bundlephobia](https://badgen.net/bundlephobia/minzip/react-obfuscate-email)](https://bundlephobia.com/package/react-obfuscate-email)
 
 📧 React component to obfuscate email links.
 

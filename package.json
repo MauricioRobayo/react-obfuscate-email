@@ -10,18 +10,7 @@
   "engines": {
     "node": ">=12"
   },
-  "scripts": {
-    "start": "tsdx watch",
-    "build": "rimraf dist && tsc --emitDeclarationOnly && rollup --config",
-    "tsc": "tsc",
-    "test": "jest --passWithNoTests",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build",
-    "size": "size-limit",
-    "analyze": "size-limit --why",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
+  "scripts": {},
   "peerDependencies": {
     "react": ">=16"
   },

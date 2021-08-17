@@ -2,16 +2,23 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Email } from "../src/Email";
+import styled from "styled-components";
+
+const StyledEmail = styled(Email)`
+  color: deepskyblue;
+`;
 
 export default {
   title: "Examples",
-  component: Email,
+  component: StyledEmail,
   args: {
     email: "test@example.com",
   },
 } as ComponentMeta<typeof Email>;
 
-const Template: ComponentStory<typeof Email> = (args) => <Email {...args} />;
+const Template: ComponentStory<typeof StyledEmail> = (args) => (
+  <StyledEmail {...args} />
+);
 
 export const Simple = Template.bind({});
 Simple.args = {};

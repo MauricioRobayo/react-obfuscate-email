@@ -6,8 +6,8 @@ import { Email } from "../src/Email";
 export default {
   title: "Examples",
   component: Email,
-  argTypes: {
-    email: { defaultValue: "test@example.com" },
+  args: {
+    email: "test@example.com",
   },
 } as ComponentMeta<typeof Email>;
 

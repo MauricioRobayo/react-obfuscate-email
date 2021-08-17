@@ -15,8 +15,8 @@
     "lint": "eslint src",
     "test": "jest",
     "prepublishOnly": "npm run build",
-    "storybook": "start-storybook --docs --no-manager-cache -p 6006",
-    "build-storybook": "build-storybook --docs --output-dir docs"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook --output-dir docs"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -33,9 +33,8 @@
   "module": "dist/react-obfuscate-email.esm.js",
   "devDependencies": {
     "@babel/core": "^7.15.0",
-    "@storybook/addon-actions": "^6.3.7",
+    "@storybook/addon-a11y": "^6.3.7",
     "@storybook/addon-essentials": "^6.3.7",
-    "@storybook/addon-links": "^6.3.7",
     "@storybook/react": "^6.3.7",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",

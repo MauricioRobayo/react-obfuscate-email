@@ -31,7 +31,7 @@ Will render:
 <a href="#">📧 Email me!</a>
 ```
 
-The `href` attribute is set to a `#` making it useless for bots scraping for emails.
+The `href` attribute is set to a `#` making it useless for email scraping bots.
 
 Once the user interacts with it by hovering over it or focusing on it, it will properly set the `href` attribute:
 
@@ -76,7 +76,7 @@ You can also include the `_target` attribute (or any other `a` attribute):
   target="_blank"
   rel="noopener noreferrer"
 >
-  Email me!
+  📧 Email me!
 </Email>
 ```
 
@@ -84,7 +84,7 @@ Will render:
 
 ```html
 <a href="#" title="Email me!" target="_blank" rel="noopener noreferrer"
-  >Email me!</a
+  >📧 Email me!</a
 >
 ```
 

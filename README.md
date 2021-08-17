@@ -5,10 +5,10 @@
 ## Usage
 
 ```sh
-npm i react-obfuscate-email
+npm install react-obfuscate-email --save
 ```
 
-Import `Email` component (notice it is not a `default` export):
+Import `Email` component:
 
 ```js
 import { Email } from "react-obfuscate-email";

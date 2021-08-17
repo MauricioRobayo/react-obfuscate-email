@@ -21,6 +21,13 @@
   "peerDependencies": {
     "react": ">=16"
   },
+  "keywords": [
+    "email",
+    "react",
+    "component",
+    "obfuscate",
+    "obfuscator"
+  ],
   "name": "react-obfuscate-email",
   "author": "Mauricio Robayo",
   "module": "dist/react-obfuscate-email.esm.js",

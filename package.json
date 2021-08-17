@@ -17,5 +17,9 @@
   "name": "react-obfuscate-email",
   "author": "Mauricio Robayo",
   "module": "dist/react-obfuscate-email.esm.js",
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/react": "^17.0.18",
+    "react": "^17.0.2",
+    "typescript": "^4.3.5"
+  }
 }

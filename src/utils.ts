@@ -1,6 +1,6 @@
 function isValidParam(param: any): param is [string, string] {
   const [, value] = param;
-  return typeof value === 'string' && value.length > 0;
+  return typeof value === "string" && value.length > 0;
 }
 /*
   Do not use URLSearchParams.
@@ -20,5 +20,5 @@ export function percentEncodeParams(params: {
   return Object.entries(params)
     .filter(isValidParam)
     .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
-    .join('&');
+    .join("&");
 }

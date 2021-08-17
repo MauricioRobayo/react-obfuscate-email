@@ -1,14 +1,14 @@
-import React from 'react';
-import { Meta } from '@storybook/react';
-import { Email } from '../src';
+import React from "react";
+import { Meta } from "@storybook/react";
+import { Email } from "../src";
 
 const meta: Meta = {
-  title: 'Email',
+  title: "Email",
   component: Email,
   argTypes: {
     children: {
       control: {
-        type: 'text',
+        type: "text",
       },
     },
   },

@@ -11,7 +11,7 @@ npm i react-obfuscate-email
 Import `Email` component (notice it is not a `default` export):
 
 ```js
-import { Email } from 'react-obfuscate-email';
+import { Email } from "react-obfuscate-email";
 ```
 
 ## Examples

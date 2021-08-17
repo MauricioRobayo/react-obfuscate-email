@@ -3,11 +3,11 @@ import React, {
   DetailedHTMLProps,
   ReactNode,
   useState,
-} from 'react';
-import { percentEncodeParams } from './utils';
+} from "react";
+import { percentEncodeParams } from "./utils";
 
 function obfuscateEmail(email: string): JSX.Element {
-  const [username, domain] = email.split('@');
+  const [username, domain] = email.split("@");
   return (
     <>
       <style
@@ -37,8 +37,8 @@ type Props = DetailedHTMLProps<
   subject?: string;
 };
 export function Email({
-  body = '',
-  subject = '',
+  body = "",
+  subject = "",
   children,
   className,
   email,
@@ -60,7 +60,7 @@ export function Email({
   return (
     <a
       className={className}
-      href={hovered ? emailUrl.href : '#'}
+      href={hovered ? emailUrl.href : "#"}
       onFocus={handleHover}
       onMouseOver={handleHover}
       {...rest}

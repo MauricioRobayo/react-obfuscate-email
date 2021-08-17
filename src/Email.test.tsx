@@ -15,35 +15,29 @@ const cases = [
   {
     component: <Email email={fakeEmail} />,
     text: fakeEmail,
-    obfuscatedText: fakeEmail.replace("@", ""),
   },
   {
     component: <Email email={fakeEmail}>{displayText}</Email>,
     text: displayText,
-    obfuscatedText: displayText,
   },
 ];
 
 describe.each(events)("obfuscate email until $name", ({ trigger }) => {
-  it.each(cases)(
-    "renders $obfuscatedText",
-    ({ component, text, obfuscatedText }) => {
-      const { queryByText, getByRole, getByText } = render(component);
-      const link = getByRole("link");
+  it.each(cases)("renders $obfuscatedText", ({ component, text }) => {
+    const { queryByText, getByRole, getByText } = render(component);
+    const link = getByRole("link");
 
-      expect(link).not.toHaveAttribute(
-        "href",
-        expect.stringContaining(fakeEmail)
-      );
-      expect(queryByText(fakeEmail)).not.toBeInTheDocument();
-      expect(getByText(obfuscatedText)).toBeInTheDocument();
+    expect(link).not.toHaveAttribute(
+      "href",
+      expect.stringContaining(fakeEmail)
+    );
+    expect(queryByText(fakeEmail)).not.toBeInTheDocument();
 
-      trigger(link);
+    trigger(link);
 
-      expect(link).toHaveAttribute("href", `mailto:${fakeEmail}`);
-      expect(getByText(text)).toBeInTheDocument();
-    }
-  );
+    expect(link).toHaveAttribute("href", `mailto:${fakeEmail}`);
+    expect(getByText(text)).toBeInTheDocument();
+  });
 
   describe("properly set query string", () => {
     it("body", () => {

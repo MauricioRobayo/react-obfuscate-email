@@ -1,5 +1,7 @@
 # React Obfuscate Email
 
+[![codecov](https://codecov.io/gh/MauricioRobayo/react-obfuscate-email/branch/main/graph/badge.svg?token=gkrRmHZHGB)](https://codecov.io/gh/MauricioRobayo/react-obfuscate-email)
+
 📧 React component to obfuscate email links.
 
 ## Usage

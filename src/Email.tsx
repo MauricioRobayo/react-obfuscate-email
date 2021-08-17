@@ -13,7 +13,7 @@ function obfuscateEmail(email: string): JSX.Element {
       <style
         dangerouslySetInnerHTML={{
           __html: `
-          a.span.roe::after {
+          a>span.roe::after {
             content: "@";
           }
         `,

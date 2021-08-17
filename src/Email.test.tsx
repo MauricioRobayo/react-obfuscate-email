@@ -44,65 +44,67 @@ describe.each(events)("obfuscate email until $name", ({ trigger }) => {
       expect(getByText(text)).toBeInTheDocument();
     }
   );
-});
 
-describe("properly set query string", () => {
-  it("adds body", () => {
-    const body = "You rock!";
-    const { getByRole } = render(<Email email={fakeEmail} body={body} />);
-    const link = getByRole("link");
+  describe("properly set query string", () => {
+    it("adds body", () => {
+      const body = "You rock!";
+      const { getByRole } = render(<Email email={fakeEmail} body={body} />);
+      const link = getByRole("link");
 
-    expect(link).not.toHaveAttribute(
-      "href",
-      expect.stringContaining(fakeEmail)
-    );
+      expect(link).not.toHaveAttribute(
+        "href",
+        expect.stringContaining(fakeEmail)
+      );
 
-    fireEvent.focus(link);
+      fireEvent.focus(link);
 
-    expect(link).toHaveAttribute(
-      "href",
-      `mailto:${fakeEmail}?body=${encodeURIComponent(body)}`
-    );
-  });
+      expect(link).toHaveAttribute(
+        "href",
+        `mailto:${fakeEmail}?body=${encodeURIComponent(body)}`
+      );
+    });
 
-  it("adds subject", () => {
-    const subject = "Hi 👋";
-    const { getByRole } = render(<Email email={fakeEmail} subject={subject} />);
-    const link = getByRole("link");
+    it("adds subject", () => {
+      const subject = "Hi 👋";
+      const { getByRole } = render(
+        <Email email={fakeEmail} subject={subject} />
+      );
+      const link = getByRole("link");
 
-    expect(link).not.toHaveAttribute(
-      "href",
-      expect.stringContaining(fakeEmail)
-    );
+      expect(link).not.toHaveAttribute(
+        "href",
+        expect.stringContaining(fakeEmail)
+      );
 
-    fireEvent.focus(link);
+      fireEvent.focus(link);
 
-    expect(link).toHaveAttribute(
-      "href",
-      `mailto:${fakeEmail}?subject=${encodeURIComponent(subject)}`
-    );
-  });
+      expect(link).toHaveAttribute(
+        "href",
+        `mailto:${fakeEmail}?subject=${encodeURIComponent(subject)}`
+      );
+    });
 
-  it("adds body and subject", () => {
-    const body = "You rock!";
-    const subject = "Hi 👋";
-    const { getByRole } = render(
-      <Email email={fakeEmail} body={body} subject={subject} />
-    );
-    const link = getByRole("link");
+    it("adds body and subject", () => {
+      const body = "You rock!";
+      const subject = "Hi 👋";
+      const { getByRole } = render(
+        <Email email={fakeEmail} body={body} subject={subject} />
+      );
+      const link = getByRole("link");
 
-    expect(link).not.toHaveAttribute(
-      "href",
-      expect.stringContaining(fakeEmail)
-    );
+      expect(link).not.toHaveAttribute(
+        "href",
+        expect.stringContaining(fakeEmail)
+      );
 
-    fireEvent.focus(link);
+      fireEvent.focus(link);
 
-    expect(link).toHaveAttribute(
-      "href",
-      `mailto:${fakeEmail}?body=${encodeURIComponent(
-        body
-      )}&subject=${encodeURIComponent(subject)}`
-    );
+      expect(link).toHaveAttribute(
+        "href",
+        `mailto:${fakeEmail}?body=${encodeURIComponent(
+          body
+        )}&subject=${encodeURIComponent(subject)}`
+      );
+    });
   });
 });

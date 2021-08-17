@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function isValidParam(param: any): param is [string, string] {
   const [, value] = param;
   return typeof value === "string" && value.length > 0;

@@ -43,7 +43,7 @@ export function Email({
   className,
   email,
   ...rest
-}: Props) {
+}: Props): JSX.Element {
   const [hovered, setHovered] = useState(false);
   const emailUrl = new URL(`mailto:${email}`);
 

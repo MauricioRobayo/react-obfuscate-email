@@ -1,4 +1,4 @@
-import { percentEncodeParams } from "../src/utils";
+import { percentEncodeParams } from "./utils";
 
 it("should return an empty string if params are empty strings", () => {
   const result = percentEncodeParams({ body: "", subject: "" });

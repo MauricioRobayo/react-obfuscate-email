@@ -1,7 +1,7 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { Email } from "../src/index";
+import { Email } from "./index";
 
 const fakeEmail = "test@example.com";
 const displayText = "Email me!";

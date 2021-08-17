@@ -76,7 +76,7 @@ You can also include the `_target` attribute (or any other `a` attribute):
   target="_blank"
   rel="noopener noreferrer"
 >
-  Email me!
+  📧 Email me!
 </Email>
 ```
 
@@ -84,7 +84,7 @@ Will render:
 
 ```html
 <a href="#" title="Email me!" target="_blank" rel="noopener noreferrer"
-  >Email me!</a
+  >📧 Email me!</a
 >
 ```
 

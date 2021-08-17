@@ -46,7 +46,7 @@ describe.each(events)("obfuscate email until $name", ({ trigger }) => {
   );
 
   describe("properly set query string", () => {
-    it("adds body", () => {
+    it("body", () => {
       const body = "You rock!";
       const { getByRole } = render(<Email email={fakeEmail} body={body} />);
       const link = getByRole("link");
@@ -64,7 +64,7 @@ describe.each(events)("obfuscate email until $name", ({ trigger }) => {
       );
     });
 
-    it("adds subject", () => {
+    it("subject", () => {
       const subject = "Hi 👋";
       const { getByRole } = render(
         <Email email={fakeEmail} subject={subject} />
@@ -84,7 +84,7 @@ describe.each(events)("obfuscate email until $name", ({ trigger }) => {
       );
     });
 
-    it("adds body and subject", () => {
+    it("body and subject", () => {
       const body = "You rock!";
       const subject = "Hi 👋";
       const { getByRole } = render(
@@ -105,6 +105,40 @@ describe.each(events)("obfuscate email until $name", ({ trigger }) => {
           body
         )}&subject=${encodeURIComponent(subject)}`
       );
+    });
+  });
+
+  describe("properly set attributes", () => {
+    const attributes = [
+      {
+        name: "title",
+        value: "Email me!",
+      },
+      {
+        name: "target",
+        value: "_blank",
+      },
+      {
+        name: "rel",
+        value: "noreferrer noopener",
+      },
+    ];
+    it.each(attributes)("$name", ({ name, value }) => {
+      const { getByRole } = render(
+        <Email email={fakeEmail} {...{ [name]: value }} />
+      );
+      const link = getByRole("link");
+
+      expect(link).not.toHaveAttribute(
+        "href",
+        expect.stringContaining(fakeEmail)
+      );
+      expect(link).toHaveAttribute(name, value);
+
+      fireEvent.focus(link);
+
+      expect(link).toHaveAttribute("href", `mailto:${fakeEmail}`);
+      expect(link).toHaveAttribute(name, value);
     });
   });
 });

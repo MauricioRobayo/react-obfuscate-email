@@ -17,15 +17,5 @@
   "name": "react-obfuscate-email",
   "author": "Mauricio Robayo",
   "module": "dist/react-obfuscate-email.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/react-obfuscate-email.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/react-obfuscate-email.esm.js",
-      "limit": "10 KB"
-    }
-  ],
   "devDependencies": {}
 }

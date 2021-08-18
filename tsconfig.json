@@ -17,6 +17,6 @@
     "removeComments": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "stories/StyledEmail.tsx"],
   "exclude": ["**/*.test.ts", "**/*.test.tsx"]
 }

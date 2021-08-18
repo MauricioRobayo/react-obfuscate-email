@@ -16,7 +16,7 @@
     "test": "jest",
     "prepublishOnly": "npm run build",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook --docs --output-dir=docs"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -35,9 +35,7 @@
     "@babel/core": "^7.15.0",
     "@storybook/addon-actions": "^6.3.7",
     "@storybook/addon-essentials": "^6.3.7",
-    "@storybook/addon-links": "^6.3.7",
     "@storybook/react": "^6.3.7",
-    "@storybook/theming": "^6.3.7",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@types/jest": "^27.0.1",
@@ -59,9 +57,5 @@
   },
   "optionalDependencies": {
     "fsevents": "^2.3.2"
-  },
-  "dependencies": {
-    "@types/styled-components": "^5.1.12",
-    "styled-components": "^5.3.0"
   }
 }

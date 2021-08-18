@@ -30,11 +30,16 @@ type Props = DetailedHTMLProps<
   AnchorHTMLAttributes<HTMLAnchorElement>,
   HTMLAnchorElement
 > & {
+  /** blind carbon copy e-mail addresses */
   bcc?: string[];
+  /** body of e-mail */
   body?: string;
+  /** carbon copy e-mail addresses */
   cc?: string[];
   children?: ReactNode;
+  /** e-mail recipient address */
   email: string;
+  /** subject of e-mail */
   subject?: string;
 };
 export function Email({

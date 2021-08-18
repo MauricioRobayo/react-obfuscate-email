@@ -18,14 +18,12 @@ const Template: ComponentStory<typeof Email> = (args) => (
 export const Simple = Template.bind({});
 Simple.args = {};
 
-export const Body = Template.bind({});
-Body.args = {
+export const Complex = Template.bind({});
+Complex.args = {
   body: "You rock!",
-};
-
-export const Subject = Template.bind({});
-Subject.args = {
   subject: "Hi 👋",
+  cc: ["cc1@example.com", "cc2@example.com"],
+  bcc: ["bcc@example.com"],
 };
 
 export const Children = Template.bind({});

@@ -17,6 +17,11 @@ export const Template = (args) => <Email {...args} />;
 
 View on [GitHub](https://github.com/MauricioRobayo/react-obfuscate-email).
 
+Until you hover or focus on the link, the `@` symbol is stripped out and rendered using `::after` css pseudo-element, and the `href` attribute value is replaced with `#`.
+
+- No dependencies
+- Tree-shakeable
+
 ## Installation
 
 ```sh
@@ -27,6 +32,10 @@ npm install --save react-obfuscate-email
 
 ```js
 import { Email } from "react-obfuscate-email";
+
+export default function SomeComponent() {
+  return <Email email="test@example.com">📧 Email me!</Email>;
+}
 ```
 
 ## Props
@@ -35,7 +44,7 @@ import { Email } from "react-obfuscate-email";
 
 ## Examples
 
-Until you hover or focus on the link, the `@` symbol is stripped out and rendered using `::after` css pseudo-element, and the `href` attribute value is replaced with `#`.
+Inspect the element without hovering or focusing on it to see what's actually rendered:
 
 <Canvas>
   <Story

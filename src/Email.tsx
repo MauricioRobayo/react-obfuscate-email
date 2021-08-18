@@ -44,7 +44,7 @@ export function Email({
   children,
   email,
   subject = "",
-  ...rest
+  ...props
 }: Props): JSX.Element {
   const [hovered, setHovered] = useState(false);
   const emailUrl = new URL(`mailto:${email}`);
@@ -64,7 +64,7 @@ export function Email({
       href={hovered ? emailUrl.href : "#"}
       onFocus={handleHover}
       onMouseOver={handleHover}
-      {...rest}
+      {...props}
     >
       {hovered ? displayText : obfuscatedText}
     </a>

@@ -16,7 +16,7 @@
     "test": "jest",
     "prepublishOnly": "npm run build",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook --docs --output-dir=docs"
+    "build-docs": "build-storybook --docs --output-dir=docs"
   },
   "peerDependencies": {
     "react": ">=16"

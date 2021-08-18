@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Email } from "../src/Email";
 
 export default {
-  title: "Examples",
+  title: "React Obfuscate Email",
   component: Email,
   args: {
     email: "test@example.com",

@@ -40,7 +40,6 @@ export function Email({
   body = "",
   subject = "",
   children,
-  className,
   email,
   ...rest
 }: Props): JSX.Element {
@@ -59,7 +58,6 @@ export function Email({
 
   return (
     <a
-      className={className}
       href={hovered ? emailUrl.href : "#"}
       onFocus={handleHover}
       onMouseOver={handleHover}

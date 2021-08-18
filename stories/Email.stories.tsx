@@ -11,20 +11,18 @@ export default {
   },
 } as ComponentMeta<typeof Email>;
 
-const Template: ComponentStory<typeof Email> = (args) => (
-  <Email style={{ color: "aqua" }} {...args} />
-);
+const Template: ComponentStory<typeof Email> = (args) => <Email {...args} />;
 
-export const Simple = Template.bind({});
-Simple.args = {};
-
-export const Complex = Template.bind({});
-Complex.args = {
+export const Default = Template.bind({});
+Default.args = {
   body: "You rock!",
   subject: "Hi 👋",
   cc: ["cc1@example.com", "cc2@example.com"],
   bcc: ["bcc@example.com"],
 };
+
+export const Simple = Template.bind({});
+Simple.args = {};
 
 export const Children = Template.bind({});
 Children.args = {

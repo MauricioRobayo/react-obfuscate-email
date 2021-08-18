@@ -15,7 +15,7 @@
     "lint": "eslint src",
     "test": "jest",
     "prepublishOnly": "npm run build",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook --docs --no-manager-cache",
     "build-docs": "build-storybook --docs --output-dir=docs"
   },
   "peerDependencies": {

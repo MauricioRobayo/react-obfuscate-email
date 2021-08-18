@@ -30,11 +30,10 @@ type Props = DetailedHTMLProps<
   AnchorHTMLAttributes<HTMLAnchorElement>,
   HTMLAnchorElement
 > & {
-  bcc: string[];
+  bcc?: string[];
   body?: string;
-  cc: string[];
+  cc?: string[];
   children?: ReactNode;
-  className?: string;
   email: string;
   subject?: string;
 };

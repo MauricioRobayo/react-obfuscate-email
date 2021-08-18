@@ -8,6 +8,8 @@
 
 📧🚫🤖 **Simple and lightweight email obfuscator React component**.
 
+Until you hover or focus on the link, the `@` symbol is stripped out and rendered using `::after` css pseudo-element, and the `href` attribute value is replaced with `#`.
+
 - No dependencies
 - Tree-shakeable
 

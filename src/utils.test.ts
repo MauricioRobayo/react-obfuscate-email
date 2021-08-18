@@ -29,3 +29,11 @@ it("should properly create searchParams string from multiple params", () => {
   const result = percentEncodeParams({ body: "a", subject: "b" });
   expect(result).toBe("body=a&subject=b");
 });
+
+it("should properly convert array params to string params", () => {
+  const result = percentEncodeParams({
+    cc: ["cc1@example.com", "cc2@example.com"],
+    bcc: [],
+  });
+  expect(result).toBe("cc=cc1%40example.com%2Ccc2%40example.com");
+});

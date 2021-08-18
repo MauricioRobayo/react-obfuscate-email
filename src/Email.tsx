@@ -30,24 +30,28 @@ type Props = DetailedHTMLProps<
   AnchorHTMLAttributes<HTMLAnchorElement>,
   HTMLAnchorElement
 > & {
+  bcc: string[];
   body?: string;
+  cc: string[];
   children?: ReactNode;
   className?: string;
   email: string;
   subject?: string;
 };
 export function Email({
+  bcc = [],
   body = "",
-  subject = "",
+  cc = [],
   children,
   email,
+  subject = "",
   ...rest
 }: Props): JSX.Element {
   const [hovered, setHovered] = useState(false);
   const emailUrl = new URL(`mailto:${email}`);
 
   // https://github.com/whatwg/url/issues/18#issuecomment-369865339
-  emailUrl.search = percentEncodeParams({ body, subject });
+  emailUrl.search = percentEncodeParams({ bcc, body, cc, subject });
 
   function handleHover() {
     setHovered(true);

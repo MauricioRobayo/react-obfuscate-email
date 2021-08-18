@@ -4,10 +4,14 @@
 [![CI](https://github.com/MauricioRobayo/react-obfuscate-email/actions/workflows/main.yml/badge.svg)](https://github.com/MauricioRobayo/react-obfuscate-email/actions/workflows/main.yml)
 [![codecov](https://codecov.io/gh/MauricioRobayo/react-obfuscate-email/branch/main/graph/badge.svg?token=gkrRmHZHGB)](https://codecov.io/gh/MauricioRobayo/react-obfuscate-email)
 [![CodeFactor](https://www.codefactor.io/repository/github/mauriciorobayo/react-obfuscate-email/badge)](https://www.codefactor.io/repository/github/mauriciorobayo/react-obfuscate-email)
+[![bundlephobia](https://badgen.net/bundlephobia/minzip/react-obfuscate-email)](https://bundlephobia.com/package/react-obfuscate-email)
 
-📧 React component to obfuscate email links.
+📧🚫🤖 **Simple and lightweight email obfuscator React component**.
 
-[Storybook](https://www.mauriciorobayo.com/react-obfuscate-email)
+- No dependencies
+- Tree-shakeable
+
+Read the [documentation 📘](https://www.mauriciorobayo.com/react-obfuscate-email).
 
 ## Usage
 
@@ -59,15 +63,21 @@ Once the user interacts with the element, it will be properly replaced with:
 <a href="mailto:test@example.com">test@example.com</a>
 ```
 
-The component also accepts `body` and `subject` props that will be properly encoded for the link:
+The component also accepts `body`, `subject`, `cc`, and `bcc` props that will be properly encoded for the link:
 
 ```jsx
-<Email email="test@example.com" body="You rock!" subject="Hello 👋" />
+<Email
+  email="test@example.com"
+  body="You rock!"
+  subject="Hello 👋"
+  cc={["cc1@example.com", "cc2@example.com"]}
+  bcc={["bcc@example.com"]}
+/>
 ```
 
-Will properly produce `test@example.com?body=You%20rock!&subject=Hello%20%F0%9F%91%8B` as the `href` attribute once human interaction is detected (notice spaces are percent encoded instead of being replaced with '+').
+Will properly produce `test@example.com?body=You%20rock!&subject=Hello%20%F0%9F%91%8B&cc=cc1%40example.com%2Ccc2%40example.com&bcc=bcc%40example.com` as the `href` attribute once human interaction is detected (notice spaces are percent encoded instead of being replaced with '+').
 
-You can also include the `_target` attribute (or any other `a` attribute):
+You can also include the `_target` attribute (or any other `a` tag attribute):
 
 ```jsx
 <Email

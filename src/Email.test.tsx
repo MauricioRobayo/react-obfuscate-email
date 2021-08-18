@@ -7,8 +7,8 @@ const fakeEmail = "test@example.com";
 const displayText = "Email me!";
 
 const events = [
-  { name: "focus", trigger: fireEvent.focus },
-  { name: "mouseOver", trigger: fireEvent.mouseOver },
+  { name: "focus", triggerEvent: fireEvent.focus },
+  { name: "mouseOver", triggerEvent: fireEvent.mouseOver },
 ];
 
 const cases = [
@@ -22,7 +22,7 @@ const cases = [
   },
 ];
 
-describe.each(events)("obfuscate email until $name", ({ trigger }) => {
+describe.each(events)("obfuscate email until $name", ({ triggerEvent }) => {
   it.each(cases)("renders $text", ({ component, text }) => {
     const { queryByText, getByRole, getByText } = render(component);
     const link = getByRole("link");
@@ -33,7 +33,7 @@ describe.each(events)("obfuscate email until $name", ({ trigger }) => {
     );
     expect(queryByText(fakeEmail)).not.toBeInTheDocument();
 
-    trigger(link);
+    triggerEvent(link);
 
     expect(link).toHaveAttribute("href", `mailto:${fakeEmail}`);
     expect(getByText(text)).toBeInTheDocument();
@@ -68,7 +68,7 @@ describe.each(events)("obfuscate email until $name", ({ trigger }) => {
         "bcc=bcc%40example.com&cc=cc1%40example.com%2Ccc2%40example.com",
       ],
     ];
-    it.each(cases)("should add %p as %s", (query, expected) => {
+    it.each(cases)("should add %o as %s", (query, expected) => {
       const { getByRole } = render(<Email email={fakeEmail} {...query} />);
       const link = getByRole("link");
 
@@ -77,7 +77,7 @@ describe.each(events)("obfuscate email until $name", ({ trigger }) => {
         expect.stringContaining(fakeEmail)
       );
 
-      fireEvent.focus(link);
+      triggerEvent(link);
 
       expect(link).toHaveAttribute("href", `mailto:${fakeEmail}?${expected}`);
     });
@@ -110,7 +110,7 @@ describe.each(events)("obfuscate email until $name", ({ trigger }) => {
       );
       expect(link).toHaveAttribute(name, value);
 
-      fireEvent.focus(link);
+      triggerEvent(link);
 
       expect(link).toHaveAttribute("href", `mailto:${fakeEmail}`);
       expect(link).toHaveAttribute(name, value);

@@ -23,6 +23,10 @@ npm install --save react-obfuscate-email
 
 ```js
 import { Email } from "react-obfuscate-email";
+
+export default function SomeComponent() {
+  return <Email email="test@example.com">📧 Email me!</Email>;
+}
 ```
 
 Read the [documentation 📘](https://www.mauriciorobayo.com/react-obfuscate-email).

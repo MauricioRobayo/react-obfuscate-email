@@ -7,6 +7,8 @@
 
 📧 React component to obfuscate email links.
 
+[Storybook](https://www.mauriciorobayo.com/react-obfuscate-email)
+
 ## Usage
 
 ```sh

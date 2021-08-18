@@ -43,4 +43,4 @@ jobs:
         run: npm run build
 
       - name: Docs
-        run: npm run build-storybook
+        run: npm run build-docs

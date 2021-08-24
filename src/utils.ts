@@ -1,15 +1,17 @@
+type StringParam = [string, string];
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function isValidParam(param: any): param is [string, string] {
+function isValidStringParam(param: any): param is StringParam {
   const [, value] = param;
   return typeof value === "string" && value.length > 0;
 }
 
-function convertArrayParamsToStringParams([key, value]: [
-  string,
-  string | string[]
-]): [string, string] {
+function paramToStringParam([key, value]:
+  | StringParam
+  | [string, string | string[]]): StringParam {
   return Array.isArray(value) ? [key, value.join(",")] : [key, value];
 }
+
 /*
   Do not use URLSearchParams.
 
@@ -28,8 +30,8 @@ export function percentEncodeParams(params: {
   subject?: string;
 }): string {
   return Object.entries(params)
-    .map(convertArrayParamsToStringParams)
-    .filter(isValidParam)
+    .map(paramToStringParam)
+    .filter(isValidStringParam)
     .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
     .join("&");
 }

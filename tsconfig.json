@@ -15,7 +15,8 @@
     "skipLibCheck": true,
     "target": "ES2020",
     "removeComments": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node"
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "stories/StyledEmail.tsx"],
   "exclude": ["**/*.test.ts", "**/*.test.tsx"]

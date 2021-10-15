@@ -34,7 +34,7 @@
   "module": "dist/react-obfuscate-email.esm.js",
   "devDependencies": {
     "@babel/core": "^7.15.8",
-    "@storybook/addon-actions": "^6.3.9",
+    "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-docs": "^6.3.11",
     "@storybook/addon-essentials": "^6.3.11",
     "@storybook/react": "^6.3.12",

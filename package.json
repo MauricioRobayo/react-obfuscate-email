@@ -35,7 +35,7 @@
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@storybook/addon-actions": "^6.3.12",
-    "@storybook/addon-docs": "^6.3.11",
+    "@storybook/addon-docs": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.11",
     "@storybook/react": "^6.3.12",
     "@testing-library/jest-dom": "^5.14.1",

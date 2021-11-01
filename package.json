@@ -33,7 +33,7 @@
   "author": "Mauricio Robayo",
   "module": "dist/react-obfuscate-email.esm.js",
   "devDependencies": {
-    "@babel/core": "^7.15.8",
+    "@babel/core": "^7.16.0",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-docs": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",

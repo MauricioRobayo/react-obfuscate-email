@@ -20,7 +20,8 @@
     "build-docs": "build-storybook --docs --output-dir=docs"
   },
   "peerDependencies": {
-    "react": ">=16"
+    "react": ">=16",
+    "tslib": "^2.4.0"
   },
   "keywords": [
     "email",

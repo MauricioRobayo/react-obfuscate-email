@@ -21,7 +21,7 @@
   },
   "peerDependencies": {
     "react": ">=16",
-    "tslib": "^2.4.0"
+    "tslib": ">=2"
   },
   "keywords": [
     "email",

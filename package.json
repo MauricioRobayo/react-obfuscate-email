@@ -42,7 +42,7 @@
     "@testing-library/react": "^12.1.5",
     "@types/jest": "^27.5.0",
     "@types/react": "^18.0.9",
-    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
     "@typescript-eslint/parser": "^5.27.0",
     "babel-loader": "^8.2.5",
     "del-cli": "^4.0.1",

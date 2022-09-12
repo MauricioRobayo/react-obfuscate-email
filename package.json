@@ -48,7 +48,7 @@
     "del-cli": "^5.0.0",
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-react": "^7.31.7",
+    "eslint-plugin-react": "^7.31.8",
     "jest": "^27.5.1",
     "prettier": "^2.7.1",
     "react": "^17.0.2",

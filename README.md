@@ -29,7 +29,7 @@ export default function SomeComponent() {
 }
 ```
 
-Read the [documentation 📘](https://www.mauriciorobayo.com/react-obfuscate-email?nav=false).
+Read the [documentation 📘](https://mauriciorobayo.github.io/react-obfuscate-email/?nav=false).
 
 ## TypeScript
 

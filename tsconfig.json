@@ -1,13 +1,12 @@
 {
   "compilerOptions": {
-    "jsx": "react",
+    "jsx": "react-jsx",
     "esModuleInterop": true,
     "outDir": "dist",
     "declaration": true,
     "module": "commonjs",
     "rootDir": "src",
     "strict": true,
-    "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
@@ -15,8 +14,10 @@
     "target": "es6",
     "removeComments": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["ES2017"]
+    "lib": ["ES2017"],
+    "noEmit": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "stories/StyledEmail.tsx"],
-  "exclude": ["**/*.test.ts", "**/*.test.tsx"]
+  "exclude": ["**/*.test.ts", "**/*.test.tsx"],
+  "references": [{ "path": "./tsconfig.vite.json" }]
 }

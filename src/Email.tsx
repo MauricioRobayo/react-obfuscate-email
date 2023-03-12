@@ -26,10 +26,11 @@ function obfuscateEmail(email: string): JSX.Element {
   );
 }
 
-type Props = DetailedHTMLProps<
-  AnchorHTMLAttributes<HTMLAnchorElement>,
-  HTMLAnchorElement
-> & {
+export interface EmailProps
+  extends DetailedHTMLProps<
+    AnchorHTMLAttributes<HTMLAnchorElement>,
+    HTMLAnchorElement
+  > {
   /** blind carbon copy e-mail addresses */
   bcc?: string[];
   /** body of e-mail */
@@ -41,7 +42,7 @@ type Props = DetailedHTMLProps<
   email: string;
   /** subject of e-mail */
   subject?: string;
-};
+}
 export function Email({
   bcc = [],
   body = "",
@@ -50,7 +51,7 @@ export function Email({
   email,
   subject = "",
   ...props
-}: Props): JSX.Element {
+}: EmailProps): JSX.Element {
   const [hovered, setHovered] = useState(false);
   const emailUrl = new URL(`mailto:${email}`);
 

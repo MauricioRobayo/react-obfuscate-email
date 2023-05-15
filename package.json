@@ -39,7 +39,7 @@
   "name": "react-obfuscate-email",
   "author": "Mauricio Robayo",
   "devDependencies": {
-    "@babel/core": "^7.21.5",
+    "@babel/core": "^7.21.8",
     "@mdx-js/react": "^2.3.0",
     "@storybook/addon-actions": "^7.0.10",
     "@storybook/addon-docs": "^6.5.16",

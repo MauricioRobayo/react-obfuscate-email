@@ -51,7 +51,7 @@
     "@types/react": "^18.2.8",
     "@typescript-eslint/eslint-plugin": "^5.59.11",
     "@typescript-eslint/parser": "^5.59.11",
-    "@vitejs/plugin-react": "^4.0.0",
+    "@vitejs/plugin-react": "^4.0.1",
     "babel-loader": "^8.2.5",
     "del-cli": "^5.0.0",
     "eslint": "^8.42.0",

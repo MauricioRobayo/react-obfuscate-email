@@ -48,7 +48,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.5.3",
-    "@types/react": "^18.2.18",
+    "@types/react": "^18.2.19",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.62.0",
     "@vitejs/plugin-react": "^4.0.4",

@@ -2,6 +2,7 @@ import PluginReact from "@vitejs/plugin-react";
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import PluginDts from "vite-plugin-dts";
+import preserveDirectives from "rollup-preserve-directives";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -31,8 +32,8 @@ export default defineConfig({
     //
     // https://github.com/qmhc/vite-plugin-dts#vite-plugin-dts
     PluginDts({
-      outputDir: "dist/types",
-      skipDiagnostics: true,
+      outDir: "dist/types",
     }),
+    preserveDirectives(),
   ],
 });

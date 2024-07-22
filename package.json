@@ -1,5 +1,5 @@
 {
-  "version": "1.1.4",
+  "version": "1.1.5",
   "license": "MIT",
   "main": "dist/react-obfuscate-email.umd.js",
   "module": "dist/react-obfuscate-email.mjs",
@@ -7,10 +7,10 @@
     ".": {
       "import": "./dist/react-obfuscate-email.mjs",
       "require": "./dist/react-obfuscate-email.umd.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/types/index.d.ts"
     }
   },
-  "types": "dist/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "sideEffects": false,
   "files": [
     "dist"
@@ -79,5 +79,8 @@
   "bugs": {
     "url": "https://github.com/MauricioRobayo/react-obfuscate-email/issues"
   },
-  "homepage": "https://mauriciorobayo.github.io/react-obfuscate-email"
+  "homepage": "https://mauriciorobayo.github.io/react-obfuscate-email",
+  "dependencies": {
+    "rollup-preserve-directives": "^1.1.1"
+  }
 }

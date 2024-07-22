@@ -6,10 +6,11 @@
   "exports": {
     ".": {
       "import": "./dist/react-obfuscate-email.mjs",
-      "require": "./dist/react-obfuscate-email.umd.js"
+      "require": "./dist/react-obfuscate-email.umd.js",
+      "types": "./dist/index.d.ts"
     }
   },
-  "typings": "dist/types/index.d.ts",
+  "types": "dist/index.d.ts",
   "sideEffects": false,
   "files": [
     "dist"

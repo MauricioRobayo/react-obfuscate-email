@@ -43,7 +43,7 @@
     "@babel/core": "^7.22.11",
     "@mdx-js/react": "^3.0.1",
     "@storybook/addon-actions": "^7.3.2",
-    "@storybook/addon-docs": "^6.5.16",
+    "@storybook/addon-docs": "^8.2.6",
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/react": "^6.5.16",
     "@testing-library/jest-dom": "^6.1.2",

@@ -47,7 +47,7 @@
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/react": "^6.5.16",
     "@testing-library/jest-dom": "^6.5.0",
-    "@testing-library/react": "^16.0.0",
+    "@testing-library/react": "^16.0.1",
     "@types/jest": "^29.5.12",
     "@types/react": "^18.3.4",
     "@typescript-eslint/eslint-plugin": "^5.62.0",

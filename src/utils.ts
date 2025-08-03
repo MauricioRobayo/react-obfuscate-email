@@ -1,15 +1,17 @@
 type StringParam = [string, string];
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function isValidStringParam(param: any): param is StringParam {
-  const [, value] = param;
-  return typeof value === "string" && value.length > 0;
+function isValidStringParam(param: unknown): param is StringParam {
+	if (!Array.isArray(param)) {
+		return false;
+	}
+	const [, value] = param;
+	return typeof value === "string" && value.length > 0;
 }
 
 function paramToStringParam([key, value]:
-  | StringParam
-  | [string, string | string[]]): StringParam {
-  return Array.isArray(value) ? [key, value.join(",")] : [key, value];
+	| StringParam
+	| [string, string | string[]]): StringParam {
+	return Array.isArray(value) ? [key, value.join(",")] : [key, value];
 }
 
 /*
@@ -24,14 +26,14 @@ function paramToStringParam([key, value]:
       https://datatracker.ietf.org/doc/html/rfc6068#ref-STD66
 */
 export function percentEncodeParams(params: {
-  bcc?: string[];
-  body?: string;
-  cc?: string[];
-  subject?: string;
+	bcc?: string[];
+	body?: string;
+	cc?: string[];
+	subject?: string;
 }): string {
-  return Object.entries(params)
-    .map(paramToStringParam)
-    .filter(isValidStringParam)
-    .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
-    .join("&");
+	return Object.entries(params)
+		.map(paramToStringParam)
+		.filter(isValidStringParam)
+		.map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
+		.join("&");
 }

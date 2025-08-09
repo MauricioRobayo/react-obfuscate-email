@@ -23,9 +23,7 @@
     "watch": "tsc --watch",
     "lint": "eslint src",
     "test": "jest",
-    "prepublishOnly": "npm run build",
-    "storybook": "start-storybook --docs --no-manager-cache --port 6006",
-    "build-docs": "build-storybook --docs --output-dir=docs"
+  "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -43,10 +41,7 @@
     "@babel/core": "^7.25.2",
     "@biomejs/biome": "2.1.3",
     "@mdx-js/react": "^3.0.1",
-    "@storybook/addon-actions": "^8.2.9",
-    "@storybook/addon-docs": "^6.5.16",
-    "@storybook/addon-essentials": "^6.5.16",
-    "@storybook/react": "^6.5.16",
+    
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
     "@types/jest": "^29.5.12",

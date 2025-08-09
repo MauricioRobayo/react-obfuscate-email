@@ -1,3 +1,4 @@
+import { expect, it } from "vitest";
 import { percentEncodeParams } from "./utils";
 
 it("should return an empty string if params are empty strings", () => {

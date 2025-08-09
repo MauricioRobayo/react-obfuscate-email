@@ -14,10 +14,9 @@
     "target": "es6",
     "removeComments": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["ES2017"],
+    "lib": ["ES2017", "DOM"],
     "noEmit": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "stories/StyledEmail.tsx"],
-  "exclude": ["**/*.test.ts", "**/*.test.tsx"],
-  "references": [{ "path": "./tsconfig.vite.json" }]
+  "exclude": ["**/*.test.ts", "**/*.test.tsx"]
 }

@@ -31,15 +31,15 @@ export default function SomeComponent() {
 
 ## Props
 
-| Name      | Type        | Required | Default   | Description                                 |
-|-----------|------------|----------|-----------|---------------------------------------------|
-| email     | string     | Yes      | —         | E-mail recipient address                    |
-| children  | ReactNode  | No       | email     | Content to display in the link              |
-| subject   | string     | No       | ""        | Subject of e-mail                           |
-| body      | string     | No       | ""        | Body of e-mail                              |
-| cc        | string[]   | No       | []        | Carbon copy e-mail addresses                |
-| bcc       | string[]   | No       | []        | Blind carbon copy e-mail addresses          |
-| ...props  | AnchorHTMLAttributes<HTMLAnchorElement> | No | — | Any valid <a> tag attribute (e.g. target, rel, title) |
+| Name     | Type                                    | Required | Default | Description                                           |
+| -------- | --------------------------------------- | -------- | ------- | ----------------------------------------------------- |
+| email    | string                                  | Yes      | —       | E-mail recipient address                              |
+| children | ReactNode                               | No       | email   | Content to display in the link                        |
+| subject  | string                                  | No       | ""      | Subject of e-mail                                     |
+| body     | string                                  | No       | ""      | Body of e-mail                                        |
+| cc       | string[]                                | No       | []      | Carbon copy e-mail addresses                          |
+| bcc      | string[]                                | No       | []      | Blind carbon copy e-mail addresses                    |
+| ...props | AnchorHTMLAttributes<HTMLAnchorElement> | No       | —       | Any valid <a> tag attribute (e.g. target, rel, title) |
 
 ## Examples
 

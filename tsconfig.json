@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx",
+    "jsx": "react",
     "esModuleInterop": true,
     "outDir": "dist",
     "declaration": true,
@@ -15,8 +15,8 @@
     "removeComments": true,
     "forceConsistentCasingInFileNames": true,
     "lib": ["ES2017", "DOM"],
-    "noEmit": true
+    "types": ["react"]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "stories/StyledEmail.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["**/*.test.ts", "**/*.test.tsx"]
 }

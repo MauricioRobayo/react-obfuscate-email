@@ -1,5 +1,6 @@
 "use client";
 
+import * as React from "react";
 import {
   AnchorHTMLAttributes,
   DetailedHTMLProps,
@@ -8,7 +9,7 @@ import {
 } from "react";
 import { percentEncodeParams } from "./utils";
 
-function obfuscateEmail(email: string): JSX.Element {
+function obfuscateEmail(email: string): React.ReactElement {
   const [username, domain] = email.split("@");
   return (
     <>
@@ -53,7 +54,7 @@ export function Email({
   email,
   subject = "",
   ...props
-}: EmailProps): JSX.Element {
+}: EmailProps): React.ReactElement {
   const [hovered, setHovered] = useState(false);
   const emailUrl = new URL(`mailto:${email}`);
 

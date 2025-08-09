@@ -1,14 +1,20 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import dts from "vite-plugin-dts";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    dts({
+      include: ["src/index.tsx", "src/Email.tsx"],
+    }),
+  ],
   build: {
     lib: {
       entry: "src/index.tsx",
       name: "ReactObfuscateEmail",
-      formats: ["es", "cjs"],
-      fileName: (format) => `index.${format}.js`,
+      formats: ["es"],
+      fileName: "index",
     },
     rollupOptions: {
       external: ["react", "react-dom"],

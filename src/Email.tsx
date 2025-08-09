@@ -1,79 +1,81 @@
 "use client";
 
 import {
-	type AnchorHTMLAttributes,
-	type DetailedHTMLProps,
-	type ReactElement,
-	type ReactNode,
-	useState,
+  type AnchorHTMLAttributes,
+  type DetailedHTMLProps,
+  type ReactElement,
+  type ReactNode,
+  useId,
+  useState,
 } from "react";
 import { percentEncodeParams } from "./utils";
 
 function ObfuscateEmail({ email }: { email: string }) {
-	const [username, domain] = email.split("@");
-	return (
-		<>
-			<style>
-				{`
-					a>span.roe::after {
+  const id = useId();
+  const [username, domain] = email.split("@");
+  return (
+    <>
+      <style>
+        {`
+					#${id}::after {
 						content: "@";
 					}
 				`}
-			</style>
-			{username}
-			<span className="roe" />
-			{domain}
-		</>
-	);
+      </style>
+      {username}
+      <span id={id} />
+      {domain}
+    </>
+  );
 }
 
 export interface EmailProps
-	extends DetailedHTMLProps<
-		AnchorHTMLAttributes<HTMLAnchorElement>,
-		HTMLAnchorElement
-	> {
-	/** blind carbon copy e-mail addresses */
-	bcc?: string[];
-	/** body of e-mail */
-	body?: string;
-	/** carbon copy e-mail addresses */
-	cc?: string[];
-	children?: ReactNode;
-	/** e-mail recipient address */
-	email: string;
-	/** subject of e-mail */
-	subject?: string;
+  extends DetailedHTMLProps<
+    AnchorHTMLAttributes<HTMLAnchorElement>,
+    HTMLAnchorElement
+  > {
+  /** blind carbon copy e-mail addresses */
+  bcc?: string[];
+  /** body of e-mail */
+  body?: string;
+  /** carbon copy e-mail addresses */
+  cc?: string[];
+  children?: ReactNode;
+  /** e-mail recipient address */
+  email: string;
+  /** subject of e-mail */
+  subject?: string;
 }
 export function Email({
-	bcc = [],
-	body = "",
-	cc = [],
-	children,
-	email,
-	subject = "",
-	...props
+  bcc = [],
+  body = "",
+  cc = [],
+  children,
+  email,
+  subject = "",
+  ...props
 }: EmailProps): ReactElement {
-	const [hovered, setHovered] = useState(false);
-	const emailUrl = new URL(`mailto:${email}`);
+  const [hovered, setHovered] = useState(false);
+  const emailUrl = new URL(`mailto:${email}`);
 
-	// https://github.com/whatwg/url/issues/18#issuecomment-369865339
-	emailUrl.search = percentEncodeParams({ bcc, body, cc, subject });
+  // https://github.com/whatwg/url/issues/18#issuecomment-369865339
+  emailUrl.search = percentEncodeParams({ bcc, body, cc, subject });
 
-	function handleHover() {
-		setHovered(true);
-	}
+  function handleHover() {
+    setHovered(true);
+  }
 
-	const displayText = children || email;
-	const obfuscatedText = children || <ObfuscateEmail email={email} />;
+  const displayText = children || email;
+  const obfuscatedText = children || <ObfuscateEmail email={email} />;
 
-	return (
-		<a
-			href={hovered ? emailUrl.href : "#"}
-			onFocus={handleHover}
-			onMouseOver={handleHover}
-			{...props}
-		>
-			{hovered ? displayText : obfuscatedText}
-		</a>
-	);
+  return (
+    <a
+      href={hovered ? emailUrl.href : "#"}
+      onFocus={handleHover}
+      onMouseOver={handleHover}
+      {...props}
+    >
+      {hovered ? displayText : obfuscatedText}
+    </a>
+  );
 }

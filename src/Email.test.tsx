@@ -1,5 +1,3 @@
-// biome-ignore lint/correctness/noUnusedImports: React is required for JSX
-import React from "react";
 import "@testing-library/jest-dom";
 import { fireEvent, render } from "@testing-library/react";
 import { describe, expect, it } from "vitest";

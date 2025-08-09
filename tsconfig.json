@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "jsx": "react",
+    "jsx": "react-jsx",
     "esModuleInterop": true,
     "outDir": "dist",
     "declaration": true,
@@ -17,6 +17,7 @@
     "lib": ["ES2017", "DOM"],
     "types": ["react"]
   },
+
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["**/*.test.ts", "**/*.test.tsx"]
 }

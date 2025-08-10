@@ -2,12 +2,9 @@
 
 [![React Obfuscate Email](https://badgen.net/npm/v/react-obfuscate-email)](https://www.npmjs.com/package/react-obfuscate-email)
 
-📧🚫🤖 **A lightweight email obfuscator React component**.
+📧🚫🤖 **Lightweight email obfuscator React component**.
 
 Until you hover or focus on the link, the `@` symbol is stripped out and rendered using `::after` css pseudo-element, and the `href` attribute value is replaced with `#`.
-
-- No dependencies
-- Tree-shakeable
 
 ## Installation
 
@@ -24,18 +21,6 @@ export default function SomeComponent() {
   return <Email email="test@example.com">📧 Email me!</Email>;
 }
 ```
-
-## Props
-
-| Name     | Type                                    | Required | Default | Description                                           |
-| -------- | --------------------------------------- | -------- | ------- | ----------------------------------------------------- |
-| email    | string                                  | Yes      | —       | E-mail recipient address                              |
-| children | ReactNode                               | No       | email   | Content to display in the link                        |
-| subject  | string                                  | No       | ""      | Subject of e-mail                                     |
-| body     | string                                  | No       | ""      | Body of e-mail                                        |
-| cc       | string[]                                | No       | []      | Carbon copy e-mail addresses                          |
-| bcc      | string[]                                | No       | []      | Blind carbon copy e-mail addresses                    |
-| ...props | AnchorHTMLAttributes<HTMLAnchorElement> | No       | —       | Any valid <a> tag attribute (e.g. target, rel, title) |
 
 ## Examples
 
@@ -71,6 +56,18 @@ You can pass any valid `a` tag attributes, like `target` or `title`:
   📧 Email me!
 </Email>
 ```
+
+## Props
+
+| Name     | Type                                    | Required | Default | Description                                           |
+| -------- | --------------------------------------- | -------- | ------- | ----------------------------------------------------- |
+| email    | string                                  | Yes      | —       | E-mail recipient address                              |
+| children | ReactNode                               | No       | email   | Content to display in the link                        |
+| subject  | string                                  | No       | ""      | Subject of e-mail                                     |
+| body     | string                                  | No       | ""      | Body of e-mail                                        |
+| cc       | string[]                                | No       | []      | Carbon copy e-mail addresses                          |
+| bcc      | string[]                                | No       | []      | Blind carbon copy e-mail addresses                    |
+| ...props | AnchorHTMLAttributes<HTMLAnchorElement> | No       | —       | Any valid <a> tag attribute (e.g. target, rel, title) |
 
 ## TypeScript
 

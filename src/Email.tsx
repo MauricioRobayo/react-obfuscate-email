@@ -61,7 +61,7 @@ function ObfuscateEmail({ email }: { email: string }) {
 		<>
 			<style>
 				{`
-					#${id}::after {
+					#${id.replace(/[^\w-]/g, "\\$&")}::after {
 						content: "@";
 					}
 				`}
